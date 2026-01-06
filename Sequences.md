@@ -112,5 +112,5 @@ $$
 $$
  1 \times 2^{20-1} = 524288
 $$
-![bacteriamodel](https://github.com/decabitrunner/Coding-questions-for-club/blob/main/src/bacteriamodel.PNG)
+![bacteriamodel](https://github.com/decabitrunner/Coding-questions-for-club/blob/main/src/bacteriamodel.png)
 daco
