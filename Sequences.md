@@ -112,5 +112,5 @@ $$
 $$
  1 \times 2^{20-1} = 524288
 $$
-
-A more general definition of a 
+![bacteriamodel](https://github.com/decabitrunner/Coding-questions-for-club/blob/main/src/bacteriamodel.PNG)
+daco
