@@ -66,3 +66,51 @@ d: 5
 x: 44611
 YES
 ```
+
+## 3.Modeling
+
+Sequances can also be used to create models for things. A model, is a math equation which predicts what will happen in the real world. Geometric sequences are often used to create models. Geometric sequences are made, when you move to the next number by multiplying. For example in the sequance below, you start at 1 and then multiply by 2 each time.
+
+$$
+1,2,4,8,16,32,64,128...
+$$
+
+If you want to get the 3rd term in this sequacne you have to multiply the first term in the sequency by 2 two times, like this:
+
+$$
+1 \times 2 \times 2 = 4
+$$
+
+Because $2\times2=2^2$, you can write this as
+
+$$
+1\times2^2 = 4
+$$
+
+If you want to get the 6th term in this sequance you have to multiply the first term in the sequency by 2 five times, like this:
+
+$$
+1 \times 2 \times 2 \times 2 \times 2 \times 2 = 32
+$$
+
+$$
+1 \times 2^5 = 32
+$$
+
+So, if you want to get the nth term of this sequance, you have to do this:
+
+$$
+u_n = 1 \times 2^{n-1}
+$$
+
+This can be used to model the population of bacteria for example. We know that bacteria can split into two to reproduce. Let's say we have a population of bacteria which reproduce 1 time per day. On day 1 ($n=1$), we have just one bacterium, but then the next day ($n=2$) its 2 and then on the next one ($n=3$) its 4 and so on. Now we have a model and if we want to know how many bacteria there will be at day $20$, we can just substitute it into the equation, as shown:
+
+$$
+ 1 \times 2^{n-1} = \text{amount of bacteria}
+$$
+
+$$
+ 1 \times 2^{20-1} = 524288
+$$
+
+A more general definition of a 
