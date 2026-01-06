@@ -112,5 +112,28 @@ $$
 $$
  1 \times 2^{20-1} = 524288
 $$
+
 ![bacteriamodel](https://github.com/decabitrunner/Coding-questions-for-club/blob/main/src/bacteriamodel.png)
-daco
+
+A more general form of the nth term, which is written as $u_n$ of a geometric sequance is shown below. $a$ means the first term and $r$ is the number you multiply by.
+
+$$
+u_n = ar^{n-1}
+$$
+
+For example, many games have score boosters which increase your score by some percentage (scores are always rounded to the nearest whole number). Let's say in a game you start out with a score of $320$ ($a=320$)and then you can collect score boosters which increase your score by 20%. That is the same as multiplying every time by $1.2$ so $r=1.2$. You can model the score using a geometric sequance if you say that $n$ is the number of times you collect the score booster:
+
+$$
+\text{score} = 320 \times 1.2^{n-1}
+$$
+
+This would give the sequance:
+
+$$
+320, 384, 461, 553, 664...
+$$
+
+But when you play this game your actual score after collecting 5 score boosters is 678, that is because you can also collect score points allong the way. This means the model is not 100% accurate. Is it good enough?
+
+It was supposed to be 664 but it was actually 678. That means the model was off by $678-664$ score points. If a model is off by more than 10% of what it predicted, it is a `BAD` model. becuase 10% of 664 is 66.4, and that is more than 14 the model can be concidered a `GOOD` model. 
+
