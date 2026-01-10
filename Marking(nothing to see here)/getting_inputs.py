@@ -22,9 +22,10 @@ async def q3():
     model = []
     actual = []
     q=1
+    options = [lambda: random.uniform(0,0.1)]*7+[lambda: random.uniform(0,0.2), lambda: random.uniform(0,0.5)]
     for i in range(5):
         x = round(a*r**i)
-        y = round(x+random.choice([1,-1])*random.choice([lambda: random.uniform(0,0.1), lambda: random.uniform(0,0.2), lambda: random.uniform(0,0.5)])()*x)
+        y = round(x+random.choice([1,-1])*random.choice(options)()*x)
         q= q & (1 if abs(x-y)<=0.1*x else 0)
         model.append(x)
         actual.append(y)
