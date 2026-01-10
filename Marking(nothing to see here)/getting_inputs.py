@@ -2,9 +2,6 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import random
 import math
-import sys
-
-sys.set_int_max_str_digits(0)
 
 app = FastAPI()
 
@@ -43,14 +40,14 @@ async def sequences_q3():
 @app.get('/Sequances/q4')
 async def sequences_q4():
     response = {}
-    answer = sorted(set([random.randint(11, 6500) for i in range(random.randint(0, 1000))]))
+    answer = sorted(set([random.randint(11, 650) for i in range(random.randint(0, 100))]))
     sequence_functions = [lambda a, b, n: a * n + b, lambda a, b, n: a * b ** (n - 1), lambda a, b, n: round(
         ((b - a * ((1 - math.sqrt(5)) / 2)) / math.sqrt(5)) * ((1 + math.sqrt(5)) / 2) ** (n - 1) + (
                     (a * ((1 + math.sqrt(5)) / 2) - b) / math.sqrt(5)) * ((1 - math.sqrt(5)) / 2) ** (n - 1))]
     sequence = []
     sequence_type = random.choice(sequence_functions)
     a, b = random.randint(1, 50), random.randint(1, 50)
-    for i in range(1, 6501):
+    for i in range(1, 651):
         term = sequence_type(a, b, i)
         if i in answer:
             sequence.append(term - random.randint(1, (term - 1)))
