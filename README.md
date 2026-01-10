@@ -1,2 +1,5 @@
 # Coding-questions-for-club
-Questions for KS3 student with a keen interest in programming
+
+Thematic sets of questions:
+
+  1.[a relative link](Sequances.md)
