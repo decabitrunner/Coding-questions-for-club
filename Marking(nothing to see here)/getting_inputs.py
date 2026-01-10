@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import random
 import math
+import sys
+
+sys.set_int_max_str_digits(0)
 
 app = FastAPI()
 
