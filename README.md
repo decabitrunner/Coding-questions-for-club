@@ -2,4 +2,4 @@
 
 Thematic sets of questions:
 
-  1.[a relative link](Sequances.md)
+  1.[a relative link](Sequences.md)
