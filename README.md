@@ -1,4 +1,4 @@
-# Coding-questions-for-club
+# Programming Club
 
 Thematic sets of questions:
 
