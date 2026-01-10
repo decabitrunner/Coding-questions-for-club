@@ -2,4 +2,4 @@
 
 Thematic sets of questions:
 
-  1.[Sequences](Sequences.md)
+  1.[Sequences](questions/Sequences.md)
