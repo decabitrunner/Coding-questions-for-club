@@ -14,7 +14,7 @@ class submitModel(BaseModel):
 async def root():
     return 404
 
-@app.get('Sequances/q3')
+@app.get('/Sequances/q3')
 async def q3():
     response = {}
     a = random.randint(1,1000)
