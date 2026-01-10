@@ -137,3 +137,77 @@ But when you play this game your actual score after collecting 5 score boosters 
 
 It was supposed to be 664 but it was actually 678. That means the model was off by $678-664$ score points. If a model is off by more than 10% of what it predicted, it is a `BAD` model. becuase 10% of 664 is 66.4, and that is more than 14 the model can be concidered a `GOOD` model. 
 
+In this question, you will recive two lists, one stored in the variable `model` which stores the five values (indexed from 0 to n-1) predicted by the geometric sequance model and then another stored in the variable `actual` which stores the values measured in real life. The program needs to determine whether the model is `GOOD` (within 10% of the actual values) or `BAD`.
+
+Use this template for your code, do not forget to store your answer in the `answer` variable
+
+```python
+#Getting the inputs
+import requests
+response = requests.get('https://programmingqmarker.onrender.com/Sequances/q3')
+model, real_life = list(response.json()['model']),list(response.json()['actual'])
+print(f"your inputs are: \n model = {model}\n real_life = {real_life}\n")
+
+#YOUR CODE SHOULD BE IN THIS GAP
+
+#Marking
+answer = 'ENTER YOUR ANSWER HERE'
+r = requests.post('https://programmingqmarker.onrender.com/submit',json={'id':int(response.json()['id']),'answer':str(answer)})
+print(f"\nyour answer is {'correct'if r.json()['correct']else'wrong'}! "+(''if  r.json()['correct'] else  f"{r.json()['solution']} should be the answer."))
+```
+
+You also need to print your answer, this is an example:
+
+```
+your inputs are: 
+ model = [320, 384, 461, 553, 664]
+ real_life = [320, 384, 461, 553, 678]
+
+GOOD
+
+your answer is correct!
+```
+
+## 4. Ötzi the ice man is not a good programmer
+
+After somehow waking up from his very long slumber in the ice Ötzi picks up a big interest in sequences. He starts laying sticks. For example, he could lay 3 stick then 5 sticks then 7 sticks and so on to create an arithmetic sequance. He could lay down a fiboncci sequance and also a geometric sequence with the sticks. One day, he was so fascinated that he layed out a 6500 terms of a sequence with sticks. He was very tired from a hard days work so and it was dark already, so he decided to go to sleep and admire his sequance of sticks in the sun the next day. To his horror, when he woke up the wind was blowing hard. This ment that some sticks may have been blown away by the wind. He prepared for another hard day working, as he knew he now had to count the sticks and add the stiks that were blown away. He counted all the sticks (he was good at this as he did it so many times so it didnt take too much time) and wrote them on a pice of ancient paper. Then he started veryfing that the sequance is still a valid sequance, he did the first 10 which had no issue but then an idea struck him: he heard in town about the modern beasts called computers. He thought that maybe a computer could tell him where the sticks blew away to spare him so many hours of work. Because Ötzi was born around 3345 BC, he didnt have much experiance with programming and the light from a computer screen seemed unbarable to him so he needs your help.
+
+You will be given a list stored in the variable `sticks` which contains the sequance of sticks, as Ötzi counted them. The array is indexed from 0 to n-1 but Ötzi is unfamiliar with the concept of 0 so he counts them as 1 to n. Ötzi still wants to have some fun, figuring out how much he needs to add to a pile of sticks to make the sequance valid so tell him only the indexes (in his way) of the piles that had some sticks blown away.Return the array of all the indexes, starting from the smallest up to the largest index so its easy for Ötzi to follow.
+
+These are examples with 12 piles, not 6500 for understanding:
+
+The list is `[2,3,5,8,13,21,34,55,89,144,225,377]`
+
+```
+[11]
+
+your answer is correct!
+```
+
+Explanation: Fibonacci sequance, the 10th index was wrong by 8. Becuase Ötzi considers the first index to be 1, the index in his terms is $11$. All the other ones are correct.
+
+The list is `[2,6,18,54,162,486,1458,4374,13122,39366,236196,708588]`
+
+```
+[]
+
+your answer is correct!
+```
+
+Explanation: Geometric sequence $2\times 3^{n-1}$ every single term is correct so there is no wrong index.
+
+When you are ready to help Ötzi, use this template make sure to store your array in the `answer` variable:
+
+```python
+#Getting the inputs
+import requests
+response = requests.get('https://programmingqmarker.onrender.com/Sequances/q4')
+sticks= list(response.json()['sticks'])
+
+#PUT YOUR CODE HERE
+
+#Marking
+answer = 'PUT YOUR ANSWER HERE'
+r = requests.post('https://programmingqmarker.onrender.com/submit',json={'id':int(response.json()['id']),'answer':str(answer)})
+print(f"\nyour answer is {'correct'if r.json()['correct']else'wrong'}! "+(''if  r.json()['correct'] else  f"{r.json()['solution']} should be the answer."))
+```
